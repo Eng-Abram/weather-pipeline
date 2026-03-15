@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: "Cleaned daily weather data from Open-Meteo API"
+    columns:
+      - name: day_date
+        description: "Calendar date"
+        tests:
+          - not_null
+          - unique
+      - name: max_temp_c
+        tests:
+          - not_null
+      - name: min_temp_c
+        tests:
+          - not_null
+      - name: wind_speed_kmh
+        tests:
+          - not_null
+      - name: weathercode
+        tests:
+          - not_null
+          

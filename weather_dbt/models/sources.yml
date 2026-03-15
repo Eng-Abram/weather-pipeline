@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: raw                        
+    description: "Raw tables loaded by Python extraction scripts"
+    schema: main  
+    tables:
+      - name: weather_raw
+        description: "Daily weather data fetched from Open-Meteo API"
+        columns:
+          - name: date
+            description: "The calendar date (YYYY-MM-DD)"
+          - name: temperature_2m_max
+            description: "Maximum temperature in Celsius"
+          - name: temperature_2m_min
+            description: "Minimum temperature in Celsius"
+          - name: sunrise
+            description: "Sunrise time in this day"
+          - name: sunset
+            description: "Sunset time in this day"
+          - name: weather_code
+            description: "WMO weather condition code"
+          - name: wind_speed_10m_max
+            description: "Shows the max wind speed in this day"
+          - name: loaded_at
+            description: "UTC timestamp when the row was inserted"
