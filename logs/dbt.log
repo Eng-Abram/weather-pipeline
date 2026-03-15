@@ -1,0 +1,80 @@
+[0m10:34:09.534757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74d8b2a09250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74d8b2da3690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74d8b2cd1c10>]}
+
+
+============================== 10:34:09.542682 | a855e424-504b-4030-bd0e-98390e9eff90 ==============================
+[0m10:34:09.542682 [info ] [MainThread]: Running with dbt=1.9.3
+[0m10:34:09.543490 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/home/vscode/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init weather_dbt/', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:34:09.553770 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/home/vscode/.dbt')}
+[0m10:34:09.554307 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m10:34:41.553796 [error] [MainThread]: Encountered an error:
+
+[0m10:34:41.555622 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/vscode/.local/lib/python3.11/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vscode/.local/lib/python3.11/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vscode/.local/lib/python3.11/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/vscode/.local/lib/python3.11/site-packages/dbt/task/init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vscode/.local/lib/python3.11/site-packages/dbt/task/init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vscode/.local/lib/python3.11/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/vscode/.local/lib/python3.11/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m10:34:41.556748 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 32.067993, "process_in_blocks": "856", "process_kernel_time": 0.277063, "process_mem_max_rss": "94968", "process_out_blocks": "16", "process_user_time": 1.16606}
+[0m10:34:41.557387 [debug] [MainThread]: Command `dbt init` failed at 10:34:41.557285 after 32.07 seconds
+[0m10:34:41.557778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74d8b2a11790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74d8b2bb1fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74d8b6b39b50>]}
+[0m10:34:41.558189 [debug] [MainThread]: Flushing usage events
+[0m10:34:41.912813 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:34:49.916661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708e41a2bd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708e41a4fc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708e41a2c750>]}
+
+
+============================== 10:34:49.923795 | 5f1df8a2-fdf1-45d6-afdc-b4f9de978e87 ==============================
+[0m10:34:49.923795 [info ] [MainThread]: Running with dbt=1.9.3
+[0m10:34:49.924531 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/vscode/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init weather_dbt', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:34:49.935248 [info ] [MainThread]: A project called weather_dbt already exists here.
+[0m10:34:49.936481 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.07193117, "process_in_blocks": "0", "process_kernel_time": 0.243371, "process_mem_max_rss": "95200", "process_out_blocks": "16", "process_user_time": 1.210871}
+[0m10:34:49.937118 [debug] [MainThread]: Command `dbt init` succeeded at 10:34:49.936978 after 0.07 seconds
+[0m10:34:49.937720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708e41889a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708e41a2de10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x708e41883250>]}
+[0m10:34:49.938311 [debug] [MainThread]: Flushing usage events
+[0m10:34:50.295367 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:39:12.043699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd13ddb72d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd13df83c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd13e455b50>]}
+
+
+============================== 10:39:12.049516 | 4d311e47-3647-4df7-8ba3-a2fcb08b00d1 ==============================
+[0m10:39:12.049516 [info ] [MainThread]: Running with dbt=1.9.3
+[0m10:39:12.050201 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/vscode/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init weather_dbt', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:39:12.060386 [debug] [MainThread]: Starter project path: /home/vscode/.local/lib/python3.11/site-packages/dbt/include/starter_project
+[0m10:39:12.065263 [info ] [MainThread]: 
+Your new dbt project "weather_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:39:12.065826 [info ] [MainThread]: Setting up your profile.
+[0m10:39:16.280654 [info ] [MainThread]: Profile weather_dbt written to /home/vscode/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m10:39:16.281735 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 4.290718, "process_in_blocks": "0", "process_kernel_time": 0.263113, "process_mem_max_rss": "114156", "process_out_blocks": "80", "process_user_time": 1.346463}
+[0m10:39:16.282205 [debug] [MainThread]: Command `dbt init` succeeded at 10:39:16.282085 after 4.29 seconds
+[0m10:39:16.282576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd13e187350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd141f11b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd141f11a50>]}
+[0m10:39:16.282953 [debug] [MainThread]: Flushing usage events
+[0m10:39:16.660395 [debug] [MainThread]: An error was encountered while trying to flush usage events
