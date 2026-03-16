@@ -23,7 +23,7 @@ with DAG (
     
     fetch_task = BashOperator(
     task_id='fetch_1',
-    bash_command = 'source /workspaces/weather-pipeline/.venv/bin/activate && python /workspaces/weather-pipeline/scripts/fetch_weather.py'
+    bash_command = '/workspaces/weather-pipeline/.venv/bin/python /workspaces/weather-pipeline/scripts/fetch_weather.py'
     )
 
     dbt_run_task = BashOperator(
