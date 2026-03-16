@@ -1,6 +1,5 @@
 import requests
 import duckdb
-import json
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
@@ -73,7 +72,7 @@ def load_to_duckdb(rows):
     # tabulating data
     for row in rows:
         curs.execute(
-            "INSERT INTO weather_raw(date, weather_code, max_temp_f, min_temp_f, sunrise, sunset, wind_speed_kmh, loaded_at) VALUES (?,?,?,?,?,?,?,?)",
+            "INSERT OR REPLACE INTO weather_raw(date, weather_code, max_temp_f, min_temp_f, sunrise, sunset, wind_speed_kmh, loaded_at) VALUES (?,?,?,?,?,?,?,?)",
         [row['date'], row['weather_code'], row['temperature_2m_max'], 
          row['temperature_2m_min'], row['sunrise'], row['sunset'], 
          row['wind_speed_10m_max'], row['loaded_at']]

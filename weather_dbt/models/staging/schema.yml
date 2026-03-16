@@ -18,7 +18,7 @@ models:
       - name: wind_speed_kmh
         tests:
           - not_null
-      - name: weathercode
+      - name: weather_state
         tests:
           - not_null
           
